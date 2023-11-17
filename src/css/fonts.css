@@ -1,0 +1,32 @@
+@import "variables.css";
+
+@supports not (font-variation-settings: normal) {
+    @font-face {
+        font-family: var(--static-font), var(--fallback-font);
+        src: url('../assets/fonts/static/Roboto-Light.ttf');
+        font-weight: 300;
+    }
+    @font-face {
+        font-family: var(--static-font), var(--fallback-font);
+        src: url('../assets/fonts/static/Roboto-Regular.ttf');
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: var(--static-font), var(--fallback-font);
+        src: url('../assets/fonts/static/Roboto-Medium.ttf');
+        font-weight: 500;
+    }
+    @font-face {
+        font-family: var(--static-font), var(--fallback-font);
+        src: url('../assets/fonts/static/Roboto-Bold.ttf');
+        font-weight: 700;
+    }
+}
+
+@supports (font-variation-settings: normal) {
+    @font-face {
+        font-family: var(--dynamic-font), var(--fallback-font);
+        src: url('../assets/fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf') format('truetype');
+        font-weight: 100 1000;
+    }
+}
