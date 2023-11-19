@@ -1,0 +1,42 @@
+<div class="grid-container">
+    <div class="img-container">
+        <img
+                alt="Illustration of a desktop with tabs"
+                src="{{ images.desktopImg }}"
+        >
+    </div>
+    <div class="text-container">
+        <div class="info-container">
+            <h1>{{ title }}</h1>
+            <p>{{ info }}</p>
+            <list>
+                <ul>
+                    <li>
+                        <img alt="A success icon" src="{{ images.iconList }}">
+                        <p>Product discovery and building what matters</p>
+                    </li>
+                    <li>
+                        <img alt="A success icon" src="{{ images.iconList }}">
+                        <p>Measuring to ensure updates are a success</p>
+                    </li>
+                    <li>
+                        <img alt="A success icon" src="{{ images.iconList }}">
+                        <p>And much more!</p>
+
+                    </li>
+                </ul>
+            </list>
+        </div>
+        <form id="subscriptionForm">
+            <label for="subscription">Email address</label>
+            <input
+                    id="subscription"
+                    name="subscription"
+                    placeholder="{{ placeholderText }}"
+                    required
+                    type="text"
+            >
+            <button type="submit">{{ btnText }}</button>
+        </form>
+    </div>
+</div>
