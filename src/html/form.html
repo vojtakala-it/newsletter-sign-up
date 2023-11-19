@@ -2,25 +2,25 @@
     <div class="img-container">
         <img
                 alt="Illustration of a desktop with tabs"
-                src="../assets/images/illustration-sign-up-desktop.svg"
+                src="{{ images.desktopImg }}"
         >
     </div>
     <div class="text-container">
         <div class="info-container">
-            <h1>Stay updated!</h1>
-            <p>Join 60,000+ product managers receiving monthly<br> updates on:</p>
+            <h1>{{ title }}</h1>
+            <p>{{ info }}</p>
             <list>
                 <ul>
                     <li>
-                        <img alt="A success icon" src="../assets/images/icon-list.svg">
+                        <img alt="A success icon" src="{{ images.iconList }}">
                         <p>Product discovery and building what matters</p>
                     </li>
                     <li>
-                        <img alt="A success icon" src="../assets/images/icon-list.svg">
+                        <img alt="A success icon" src="{{ images.iconList }}">
                         <p>Measuring to ensure updates are a success</p>
                     </li>
                     <li>
-                        <img alt="A success icon" src="../assets/images/icon-list.svg">
+                        <img alt="A success icon" src="{{ images.iconList }}">
                         <p>And much more!</p>
 
                     </li>
@@ -32,11 +32,11 @@
             <input
                     id="subscription"
                     name="subscription"
-                    placeholder="email@company.com"
+                    placeholder="{{ placeholderText }}"
                     required
                     type="text"
             >
-            <button type="submit">Subscribe to monthly newsletter</button>
+            <button type="submit">{{ btnText }}</button>
         </form>
     </div>
 </div>
