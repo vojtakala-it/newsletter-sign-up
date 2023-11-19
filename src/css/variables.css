@@ -1,5 +1,24 @@
 :root {
+    /*fonts*/
     --dynamic-font: RobotoFlex;
     --static-font: Roboto;
     --fallback-font: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+    --thin: 300;
+    --regular: 400;
+    --medium-weight: 500;
+    --heavy: 600;
+    --bold: 795;
+
+    --large: 3rem;
+    --medium-size: 2rem;
+    --small: 1rem;
+    --tiny: 0.9rem;
+
+    /*colors*/
+    --smooth-purplish: hsl(230.5, 19.2%, 21%);
+    --snow-white: hsl(200, 4%, 97%);
+    --dark-purplish: hsl(230.5, 21.2%, 20%);
+    --valid: hsl(140, 50%, 50%);
+    --invalid: hsl(10, 50%, 50%);
 }
