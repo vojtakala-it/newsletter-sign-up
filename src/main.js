@@ -5,6 +5,7 @@ import successMsg from './html/success-mgs.html?raw';
 const app = document.querySelector('#app');
 
 loadApp();
+
 function loadApp() {
     let showForm = true;
 
