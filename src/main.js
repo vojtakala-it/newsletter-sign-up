@@ -27,6 +27,7 @@ const formData = {
 }
 
 loadApp();
+
 function loadApp() {
     let showForm = true;
 
