@@ -7,42 +7,71 @@ import iconSuccess from './assets/images/icon-success.svg';
 import desktopImg from './assets/images/illustration-sign-up-desktop.svg';
 import mobileImg from './assets/images/illustration-sign-up-mobile.svg';
 
-const app = document.querySelector('#app');
-
-const formTemplate = Handlebars.compile(formHTML);
-const title = 'Stay Updated!';
-const info = 'Join 60,000+ product managers receiving monthly\nupdates on:';
-const placeholderText = 'email@company.com';
-const btnText = 'Subscribe to monthly newsletter';
-
-const formData = {
-    title,
-    info,
-    placeholderText,
-    btnText,
-    images: {
-        iconList,
-        desktopImg,
+class TemplateData {
+    constructor(title,
+                info,
+                placeholderText = '',
+                btnText,
+                images = {}) {
+        this.title = title;
+        this.info = info;
+        this.placeholderText = placeholderText;
+        this.btnText = btnText;
+        this.images = images;
     }
 }
+
+const app = document.querySelector('#app');
+const formTemplate = Handlebars.compile(formHTML);
+const successTemplate = Handlebars.compile(successMsg);
 
 loadApp();
 
 function loadApp() {
-    let showForm = true;
+    let templateData = new TemplateData(
+        'Stay Updated!',
+        'Join 60,000+ product managers receiving monthly<br>updates on:',
+        'email@company.com',
+        'Subscribe to monthly newsletter',
+        {iconList, desktopImg},
+    );
+    app.innerHTML = formTemplate(templateData);
+    appear();
 
-    app.innerHTML = formTemplate(formData);
     const subsForm = document.querySelector('#subscriptionForm');
-
     subsForm.addEventListener('submit', e => {
-        e.preventDefault();
-        app.innerHTML = successMsg;
-        showForm = false;
+        disappear();
+        appear();
+        const userEmail = document.getElementById('subscription').value;
+        app.innerHTML = `<div class="loader"></div>`;
 
-        const returnBtn = document.querySelector('#return');
+        setTimeout(() => {
+            e.preventDefault();
+            disappear();
+            appear();
+            templateData.title = 'Thanks for subscribing!';
+            templateData.info = `A confirmation email has been sent to<br>
+                <strong>${userEmail}</strong>. Please open it and click<br>
+                the button inside to confirm your subscription.`;
+            templateData.btnText = 'Dismiss message';
+            templateData.images = {iconSuccess};
+            app.innerHTML = successTemplate(templateData);
 
-        returnBtn.addEventListener('click', e => {
-            loadApp();
-        });
+            const returnBtn = document.querySelector('#return');
+            returnBtn.addEventListener('click', e => {
+                disappear();
+                loadApp();
+            });
+        },3000);
     });
+}
+
+function appear() {
+    setTimeout(() => {
+        app.classList.add('appear');
+    }, 300);
+}
+
+function disappear() {
+    app.classList.remove('appear');
 }

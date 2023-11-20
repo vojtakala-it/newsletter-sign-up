@@ -2,13 +2,13 @@
     /*fonts*/
     --dynamic-font: RobotoFlex;
     --static-font: Roboto;
-    --fallback-font: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    --fallback-font: 'Helvetica', 'Arial', sans-serif;
 
     --thin: 300;
     --regular: 400;
     --medium-weight: 500;
     --heavy: 600;
-    --bold: 795;
+    --bold: 700;
 
     --large: 3rem;
     --medium-size: 2rem;

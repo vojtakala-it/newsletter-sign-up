@@ -28,5 +28,6 @@
         font-family: var(--dynamic-font), var(--fallback-font);
         src: url('../assets/fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf') format('truetype');
         font-weight: 100 1000;
+        font-stretch: 25% 150%;
     }
 }
