@@ -40,7 +40,26 @@ function loadApp() {
 
     const subsForm = document.getElementById('subscriptionForm');
     const emailInput = document.getElementById('subscription');
+    const invalidEmailMsg = document.querySelector('.invalid-email-msg');
 
+    emailInput.addEventListener('input', () => {
+        if (!emailInput.validity.valid) {
+            invalidEmailMsg.style.visibility = 'visible';
+            emailInput.classList.add('invalid');
+        } else if (emailInput.validity.valid) {
+            emailInput.classList.add('valid');
+            emailInput.classList.remove('invalid');
+            invalidEmailMsg.style.visibility = 'hidden';
+        }
+    });
+
+    emailInput.addEventListener('focus', () => {
+        console.log('yay got focus');
+    });
+
+    emailInput.addEventListener('blur', () => {
+        console.log('yay lost focus');
+    });
 
     subsForm.addEventListener('submit', e => {
         disappear();
