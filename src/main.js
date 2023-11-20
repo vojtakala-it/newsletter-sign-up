@@ -21,7 +21,7 @@ class TemplateData {
     }
 }
 
-const app = document.querySelector('#app');
+const app = document.getElementById('app');
 const formTemplate = Handlebars.compile(formHTML);
 const successTemplate = Handlebars.compile(successMsg);
 
@@ -38,7 +38,10 @@ function loadApp() {
     app.innerHTML = formTemplate(templateData);
     appear();
 
-    const subsForm = document.querySelector('#subscriptionForm');
+    const subsForm = document.getElementById('subscriptionForm');
+    const emailInput = document.getElementById('subscription');
+
+
     subsForm.addEventListener('submit', e => {
         disappear();
         appear();
@@ -57,7 +60,7 @@ function loadApp() {
             templateData.images = {iconSuccess};
             app.innerHTML = successTemplate(templateData);
 
-            const returnBtn = document.querySelector('#return');
+            const returnBtn = document.getElementById('return');
             returnBtn.addEventListener('click', e => {
                 disappear();
                 loadApp();
