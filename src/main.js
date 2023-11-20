@@ -12,11 +12,13 @@ class TemplateData {
                 info,
                 placeholderText = '',
                 btnText,
+                altText = 'desktop',
                 images = {}) {
         this.title = title;
         this.info = info;
         this.placeholderText = placeholderText;
         this.btnText = btnText;
+        this.altText = altText;
         this.images = images;
     }
 }
@@ -25,15 +27,36 @@ const app = document.getElementById('app');
 const formTemplate = Handlebars.compile(formHTML);
 const successTemplate = Handlebars.compile(successMsg);
 
-loadApp();
+window.addEventListener('load', () => {
+    loadApp();
+});
+window.addEventListener('resize', () => {
+    loadApp();
+});
 
 function loadApp() {
+    if (window.innerWidth < 900) {
+        loadContent('mobile');
+    } else {
+        loadContent( 'desktop');
+    }
+}
+
+function loadContent(design) {
+    let info = 'Join 60,000+ product managers receiving monthly<br>updates on:';
+    let img = desktopImg;
+    if (design === 'mobile') {
+        info = 'Join 60,000+ product managers receiving<br>monthly updates on:';
+        img = mobileImg;
+    }
+
     let templateData = new TemplateData(
         'Stay Updated!',
-        'Join 60,000+ product managers receiving monthly<br>updates on:',
+        info,
         'email@company.com',
         'Subscribe to monthly newsletter',
-        {iconList, desktopImg},
+        design,
+        {iconList, img},
     );
     app.innerHTML = formTemplate(templateData);
     appear();
@@ -53,14 +76,6 @@ function loadApp() {
         }
     });
 
-    emailInput.addEventListener('focus', () => {
-        console.log('yay got focus');
-    });
-
-    emailInput.addEventListener('blur', () => {
-        console.log('yay lost focus');
-    });
-
     subsForm.addEventListener('submit', e => {
         disappear();
         appear();
@@ -71,10 +86,18 @@ function loadApp() {
             e.preventDefault();
             disappear();
             appear();
-            templateData.title = 'Thanks for subscribing!';
-            templateData.info = `A confirmation email has been sent to<br>
+
+            info = `A confirmation email has been sent to<br>
                 <strong>${userEmail}</strong>. Please open it and click<br>
                 the button inside to confirm your subscription.`;
+            if (design === 'mobile') {
+                info = `A confirmation email has been sent to<br>
+                <strong>${userEmail}</strong>. Please open it and<br> 
+                click the button inside to confirm your<br>
+                subscription.`;
+            }
+            templateData.title = 'Thanks for subscribing!';
+            templateData.info = info;
             templateData.btnText = 'Dismiss message';
             templateData.images = {iconSuccess};
             app.innerHTML = successTemplate(templateData);
