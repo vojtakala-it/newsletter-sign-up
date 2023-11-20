@@ -59,7 +59,7 @@ input:valid {
 /*}*/
 
 button {
-    border: 0.14vmax solid transparent;
+    border: 0.14rem solid transparent;
     background-color: var(--dark-purplish);
     color: var(--snow-white);
     font-weight: var(--heavy);
