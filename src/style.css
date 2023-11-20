@@ -37,10 +37,20 @@ form {
     row-gap: 1rem;
 }
 
-label {
+.label-container {
+    display: inherit;
+    justify-content: space-between;
+}
+
+label, .invalid-email {
     font-size: var(--tiny);
     font-weight: var(--heavy);
     color: var(--dark-purplish);
+}
+
+.invalid-email-msg {
+    visibility: hidden;
+    color: var(--invalid);
 }
 
 input, button {
@@ -50,16 +60,20 @@ input, button {
     padding: 1rem;
 }
 
-input:valid {
+.valid {
+    outline: none;
     border: 0.14rem ridge var(--valid);
 }
 
-/*input:invalid {*/
-/*    border: 0.14vw ridge var(--invalid);*/
-/*}*/
+.invalid {
+    outline: none;
+    border: 0.14rem ridge var(--invalid);
+    color: var(--invalid);
+    background-color: var(--invalid-bg);
+}
 
 button {
-    border: 0.14vmax solid transparent;
+    border: 0.14rem solid transparent;
     background-color: var(--dark-purplish);
     color: var(--snow-white);
     font-weight: var(--heavy);
