@@ -199,8 +199,8 @@ button:hover {
     }
 
     .text-container {
-        min-height: 100vh;
         padding: 1.5em 1.5em 3em 1.5em;
+        height: 60%;
     }
 
     .flexbox-container {
@@ -223,10 +223,22 @@ button:hover {
     .flexbox-container {
         padding: 2.3em 1.3em 0 1.3em;
     }
+
+    .text-container {
+        height: 80%;
+    }
 }
 
 @media only screen and (width < 350px) {
+    .img-container img {
+        width: 100%;
+    }
+
     .flexbox-container p {
         font-size: 1em;
+    }
+
+    .text-container {
+        height: 100%;
     }
 }
