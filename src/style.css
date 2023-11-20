@@ -8,6 +8,7 @@ body {
     display: inline-grid;
     place-items: center;
     height: 100vh;
+    max-width: 100%;
     width: 100vw;
     background-color: var(--smooth-purplish);
     color: var(--dark-purplish);
