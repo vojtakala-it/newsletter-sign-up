@@ -1,6 +1,6 @@
 @import "css/reset.css";
-@import "css/variables.css";
 @import "css/fonts.css";
+@import "css/variables.css";
 
 * { box-sizing: border-box }
 
@@ -19,8 +19,9 @@ body {
 
 h1 {
     font-size: var(--large);
-    font-weight: var(--bold);
+    /*font-weight: var(--bold);*/
     color: var(--dark-purplish);
+    font-weight: 700;
 }
 
 li {
@@ -67,7 +68,30 @@ button {
 
 button:hover {
     cursor: pointer;
-    background-color: hsla(230.5, 30%, 25%, 0.5);
+    background-color: hsla(230.5, 70%, 10%, 0.65);
+}
+
+.appear-animation {
+    opacity: 0;
+}
+
+.appear-animation.appear {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.loader {
+    border: 15px solid #EAF0F6;
+    border-radius: 50%;
+    border-top: 15px solid #FF7A59;
+    width: 100px;
+    height: 100px;
+    animation: spinner 2s linear infinite;
+}
+
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .grid-container {
@@ -97,6 +121,24 @@ button:hover {
     display: inherit;
     flex-direction: inherit;
     row-gap: 2rem;
+}
+
+.flexbox-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: var(--snow-white);
+    padding: 4em;
+    border-radius: 30px;
+    row-gap: 2em;
+}
+
+.flexbox-container img {
+    max-width: 55px;
+}
+
+.flexbox-container p {
+    line-height: 1.5;
 }
 
 
