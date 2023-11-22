@@ -1,0 +1,28 @@
+.form__input {
+    border: 2px ridge;
+    border-radius: 10px;
+    font-size: var(--tiny);
+}
+
+.form__label, .form__input--valid {
+    font-size: var(--tiny);
+    font-weight: var(--heavy);
+    color: var(--dark-purplish);
+}
+
+.form__input__warning {
+    visibility: hidden;
+    color: var(--invalid);
+}
+
+.form__input--valid {
+    outline: none;
+    border: 1px ridge var(--valid);
+}
+
+.form__input--invalid {
+    outline: none;
+    border: 2px ridge var(--invalid);
+    color: var(--invalid);
+    background-color: var(--invalid-bg);
+}

@@ -1,245 +1,30 @@
 @import "css/reset.css";
 @import "css/fonts.css";
 @import "css/variables.css";
+@import "css/form.css";
+@import "css/success-msg.css";
+@import "css/grid.css";
+@import "css/colors.css";
+@import "css/shared.css";
+@import "css/flexbox.css";
+@import "css/animations.css";
+@import "css/spinner.css";
+@import "css/media-queries.css";
 
-* { box-sizing: border-box }
+* {
+    box-sizing: border-box
+}
 
 body {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    max-width: 100vw;
-    width: 100%;
-    background-color: var(--smooth-purplish);
-    color: var(--dark-purplish);
     font-family: var(--dynamic-font), var(--fallback-font);
     font-synthesis: none;
+    font-weight: bold;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-    font-size: var(--large);
-    font-weight: var(--bold);
-    color: var(--dark-purplish);
-}
-
-li {
-    display: flex;
-    align-items: center;
-    column-gap: 1rem;
-    padding-bottom: 1rem;
-}
-
-form {
-    display: inherit;
-    flex-direction: column;
-    row-gap: 1rem;
-}
-
-.label-container {
-    display: inherit;
-    justify-content: space-between;
-}
-
-label, .invalid-email {
-    font-size: var(--tiny);
-    font-weight: var(--heavy);
-    color: var(--dark-purplish);
-}
-
-.invalid-email-msg {
-    visibility: hidden;
-    color: var(--invalid);
-}
-
-input, button {
-    border: 0.14rem ridge;
-    font-size: var(--tiny);
-    border-radius: 10px;
-    padding: 1rem;
-}
-
-.valid {
-    outline: none;
-    border: 0.14rem ridge var(--valid);
-}
-
-.invalid {
-    outline: none;
-    border: 0.14rem ridge var(--invalid);
-    color: var(--invalid);
-    background-color: var(--invalid-bg);
-}
-
-button {
-    border: 0.14rem solid transparent;
-    background-color: var(--dark-purplish);
-    color: var(--snow-white);
-    font-weight: var(--heavy);
-    margin-top: 0.6em;
-}
-
 button:hover {
     cursor: pointer;
-    background-color: hsla(230.5, 70%, 10%, 0.65);
-}
-
-.appear-animation {
-    opacity: 0;
-}
-
-.appear-animation.appear {
-    opacity: 1;
-    transition: opacity 0.4s ease;
-}
-
-.loader {
-    border: 15px solid #EAF0F6;
-    border-radius: 50%;
-    border-top: 15px solid #FF7A59;
-    width: 100px;
-    height: 100px;
-    animation: spinner 2s linear infinite;
-}
-
-@keyframes spinner {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.grid-container {
-    display: grid;
-    grid-template-areas: "A B";
-    column-gap: 3rem;
-    background-color: var(--snow-white);
-    padding: 1.6rem;
-    border-radius: 30px;
-}
-
-.img-container {
-    grid-area: B;
-}
-
-.text-container {
-    display: flex;
-    flex-direction: column;
-    grid-area: A;
-    align-self: center;
-    padding-left: 2rem;
-    height: 80%;
-    row-gap: 2.5rem;
-}
-
-.info-container {
-    display: inherit;
-    flex-direction: inherit;
-    row-gap: 2rem;
-}
-
-.flexbox-container {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    background-color: var(--snow-white);
-    padding: 4em;
-    border-radius: 30px;
-    row-gap: 2em;
-}
-
-.flexbox-container img {
-    max-width: 55px;
-}
-
-.flexbox-container p {
-    line-height: 1.5;
-}
-
-@media only screen and (width <= 900px) {
-    .grid-container {
-        grid-template-areas:
-            "B"
-            "A";
-        grid-template-rows: 1fr 2fr;
-        margin: 3rem 0 9rem 0;
-    }
-
-    .text-container {
-        padding-left: 0;
-    }
-
-    .flexbox-container {
-        width: 450px;
-        padding: 3em;
-    }
-}
-
-@media only screen and (width < 500px) {
-    h1 {
-        font-size: var(--medium-size);
-    }
-
-    p {
-        font-size: var(--tiny);
-    }
-
-    .grid-container {
-        min-width: 100vw;
-        margin: 0;
-        border-radius: 0;
-        padding: 0;
-    }
-
-    .img-container {
-        overflow: hidden;
-    }
-
-    .img-container img {
-        min-width: 100vw;
-    }
-
-    .text-container {
-        padding: 1.5em 1.5em 3em 1.5em;
-        height: 60%;
-    }
-
-    .flexbox-container {
-        width: 100%;
-        height: 100vh;
-        border-radius: 0;
-        padding: 3em 2em 0 2em;
-    }
-
-    .flexbox-container p {
-        font-size: 1.2em;
-    }
-
-    #return {
-        margin-top: 7em;
-    }
-}
-
-@media only screen and (width < 400px) {
-    .flexbox-container {
-        padding: 2.3em 1.3em 0 1.3em;
-    }
-
-    .text-container {
-        height: 80%;
-    }
-}
-
-@media only screen and (width < 350px) {
-    .img-container img {
-        width: 100%;
-    }
-
-    .flexbox-container p {
-        font-size: 1em;
-    }
-
-    .text-container {
-        height: 100%;
-    }
+    background-color: var(--purplish-hover);
 }

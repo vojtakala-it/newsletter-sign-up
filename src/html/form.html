@@ -1,45 +1,67 @@
-<div class="grid-container">
-    <div class="img-container">
+<div class="
+    grid
+    grid--template-areas-a-b
+    border-radius
+    bg-color--secondary
+    pxy-m
+    col-gap-xxl
+">
+    <div class="grid__item-b">
         <img
-                alt="Illustration of a {{ altText }} design"
                 src="{{ images.img }}"
+                alt="Illustration of a {{ altText }} design"
         >
     </div>
-    <div class="text-container">
-        <div class="info-container">
-            <h1>{{ title }}</h1>
-            <p>{{{ info }}}</p>
+    <div class="
+    grid__item-a
+    flexbox
+    flexbox--col
+    flexbox--center-y
+    pl
+    row-gap-xl
+">
+        <div class="flexbox flexbox--col flexbox--center-y row-gap-xl">
+            <h1 class="h1">{{ title }}</h1>
+            <p class="par">{{{ info }}}</p>
             <list>
-                <ul>
-                    <li>
-                        <img alt="A success icon" src="{{ images.iconList }}">
-                        <p>Product discovery and building what matters</p>
+                <ul class="flexbox flexbox--col row-gap-m">
+                    <li class="flexbox col-gap-m">
+                        <img class="li-icon" alt="A success icon" src="{{ images.iconList }}">
+                        <p>Product discovery and building what
+                            matters</p>
                     </li>
-                    <li>
-                        <img alt="A success icon" src="{{ images.iconList }}">
-                        <p>Measuring to ensure updates are a success</p>
+                    <li class="flexbox col-gap-m">
+                        <img class="li-icon" alt="A success icon" src="{{ images.iconList }}">
+                        <p>Measuring to ensure updates are a
+                            success</p>
                     </li>
-                    <li>
-                        <img alt="A success icon" src="{{ images.iconList }}">
+                    <li class="flexbox col-gap-m">
+                        <img class="li-icon" alt="A success icon" src="{{ images.iconList }}">
                         <p>And much more!</p>
-
                     </li>
                 </ul>
             </list>
         </div>
-        <form id="subscriptionForm">
-            <div class="label-container">
-                <label for="subscription">Email address</label>
-                <div class="invalid-email-msg">Valid email required</div>
+        <form id="subscriptionForm" class="flexbox flexbox--col row-gap-m">
+            <div class="flexbox flexbox--space-btwn">
+                <label class="form__label" for="subscription">
+                    Email address
+                </label>
+                <div class="form__input__warning">
+                    Valid email required
+                </div>
             </div>
             <input
+                    class="form__input pxy-s"
                     id="subscription"
                     name="subscription"
                     placeholder="{{ placeholderText }}"
                     required
                     type="email"
             >
-            <button type="submit">{{ btnText }}</button>
+            <button id="submitBtn" class="btn btn--primary pxy-s mt-s" type="submit">
+                {{ btnText }}
+            </button>
         </form>
     </div>
 </div>

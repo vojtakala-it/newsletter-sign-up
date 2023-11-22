@@ -1,0 +1,19 @@
+/*---------------------background colors---------------------*/
+.bg-color {
+}
+
+.bg-color--primary {
+    background-color: var(--smooth-purplish);
+}
+
+.bg-color--secondary {
+    background-color: var(--snow-white);
+}
+
+/*---------------------colors---------------------*/
+.color {
+}
+
+.color--primary {
+    color: var(--dark-purplish);
+}

@@ -1,0 +1,107 @@
+/*---------------------paddings---------------------*/
+.pxy-xxl {
+    padding: 55px;
+}
+
+.pxy-xl {
+    padding: 45px;
+}
+
+.pxy-m {
+    padding: 25px;
+}
+
+.pxy-s {
+    padding: 16px;
+}
+
+.pl {
+    padding-left: 30px;
+}
+
+.pb-s {
+    padding-bottom: 16px;
+}
+
+/*---------------------gaps---------------------*/
+.mt-s {
+    margin-top: 8px;
+}
+
+.mt-m {
+    margin-top: 16px;
+}
+
+/*---------------------gaps---------------------*/
+.col-gap-m {
+    column-gap: 16px;
+}
+
+.col-gap-xl {
+    column-gap: 40px;
+}
+
+.col-gap-xxl {
+    column-gap: 60px;
+}
+
+.row-gap-m {
+    row-gap: 16px;
+}
+
+.row-gap-l {
+    row-gap: 32px;
+}
+
+.row-gap-xl {
+    row-gap: 40px;
+}
+
+/*---------------------height & width---------------------*/
+.full-height-vh {
+    height: 100vh;
+}
+
+/*---------------------borders---------------------*/
+.border-radius {
+    border-radius: 30px;
+}
+
+/*---------------------width---------------------*/
+.width-l {
+    width: 500px;
+}
+
+.width-m {
+    width: 450px;
+}
+
+.max-width-xs {
+    max-width: 55px;
+}
+
+/*---------------------line height---------------------*/
+.line-l {
+    line-height: 1.5;
+}
+
+/*---------------------buttons---------------------*/
+.btn {
+    border: 2px;
+    border-radius: 10px;
+    font-size: var(--tiny);
+}
+
+.btn--primary {
+    border: 2px solid transparent;
+    background-color: var(--dark-purplish);
+    color: var(--snow-white);
+    font-weight: var(--heavy);
+    transition: background-color 0.3s ease;
+}
+
+/*---------------------buttons---------------------*/
+.h1 {
+    font-size: var(--large);
+    color: var(--dark-purplish);
+}

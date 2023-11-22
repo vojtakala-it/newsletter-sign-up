@@ -11,6 +11,8 @@
     --bold: 700;
 
     --large: 3rem;
+    --large-m: 2.5rem;
+    --large-s: 2.2rem;
     --medium-size: 2rem;
     --small: 1rem;
     --tiny: 0.9rem;
@@ -19,6 +21,8 @@
     --smooth-purplish: hsl(230.5, 19.2%, 21%);
     --snow-white: hsl(200, 4%, 97%);
     --dark-purplish: hsl(230.5, 21.2%, 20%);
+    --medium-purplish: hsl(230.5, 25%, 50%);
+    --purplish-hover: hsl(250, 22%, 45%);
     --valid: hsl(140, 50%, 50%);
     --invalid: hsl(0, 90%, 50%);
     --invalid-bg: hsla(0, 90%, 90%, 0.5);
