@@ -1,0 +1,20 @@
+/*---------------------flexbox---------------------*/
+.flexbox {
+    display: flex;
+}
+
+.flexbox--center-x {
+    justify-self: center;
+}
+
+.flexbox--center-y {
+    align-self: center;
+}
+
+.flexbox--col {
+    flex-direction: column;
+}
+
+.flexbox--space-btwn {
+    justify-content: space-between;
+}

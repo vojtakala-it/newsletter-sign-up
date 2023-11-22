@@ -1,0 +1,23 @@
+/*---------------------grid---------------------*/
+.grid {
+    display: grid;
+}
+
+.grid--template-areas-a-b {
+    grid-template-areas: "A B";
+}
+
+.grid-center {
+    place-items: center;
+}
+
+
+
+/*---------------------grid items---------------------*/
+.grid__item-a {
+    grid-area: A;
+}
+
+.grid__item-b {
+    grid-area: B;
+}

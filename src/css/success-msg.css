@@ -1,0 +1,13 @@
+.flexbox-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: var(--snow-white);
+    padding: 4em;
+    border-radius: 30px;
+    row-gap: 2em;
+}
+
+.flexbox-container p {
+    line-height: 1.5;
+}
