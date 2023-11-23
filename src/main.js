@@ -26,7 +26,7 @@ export function loadApp() {
 function inputClicked() {
     const subsFormEl = document.querySelector('#subscriptionForm');
     window.removeEventListener('resize', throttleResizeHandler);
-    subsFormEl.classList.add('extra-padding-bottom');
+    // subsFormEl.classList.add('extra-padding-bottom');
 
     setTimeout(() => {
         window.addEventListener('resize', throttleResizeHandler);
