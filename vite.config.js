@@ -4,7 +4,6 @@ import pxtorem from "postcss-pxtorem";
 
 export default defineConfig({
     root: 'src',
-    base: '/sign-up-form',
     build: {
         assetsDir: 'assets',
         outDir: 'dist',
