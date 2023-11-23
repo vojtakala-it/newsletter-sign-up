@@ -296,6 +296,7 @@
 
     .success-container {
         row-gap: 40px;
+        border-radius: 0;
     }
 
     .pxy-s {

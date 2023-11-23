@@ -30,6 +30,6 @@ function inputClicked() {
 
     setTimeout(() => {
         window.addEventListener('resize', throttleResizeHandler);
-    }, 2000);
+    }, 10000);
 }
 
