@@ -8,11 +8,13 @@
         "build": "vite build",
         "preview": "vite preview",
         "test": "vitest",
-        "coverage": "vitest run --coverage"
+        "coverage": "vitest run --coverage",
+        "e2e": "cypress run"
     },
     "devDependencies": {
         "@vitest/coverage-v8": "^0.34.6",
         "autoprefixer": "^10.4.16",
+        "cypress": "^13.6.0",
         "handlebars": "^4.7.8",
         "jsdom": "^22.1.0",
         "postcss": "^8.4.31",
