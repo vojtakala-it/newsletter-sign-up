@@ -33,10 +33,10 @@ export let templateValues = {
             desktop: 'A confirmation email has been sent to<br>' +
                 '<strong>{{userEmail}}</strong>. Please open it and click<br>' +
                 'the button inside to confirm your subscription.',
-            mobile: 'A confirmation email has been sent to<br>' +
-                '<strong>{{userEmail}}</strong>. Please open it and<br>' +
-                'click the button inside to confirm your<br>' +
-                'subscription.',
+            mobile: 'A confirmation email has been sent to' +
+                ' <strong>{{userEmail}}</strong>. Please open it and' +
+                ' click the button inside to confirm your' +
+                ' subscription.',
         }
     },
     btnText: {

@@ -17,7 +17,7 @@
 
 .form__input--valid {
     outline: none;
-    border: 1px ridge var(--valid);
+    border: 2px ridge var(--valid);
 }
 
 .form__input--invalid {
