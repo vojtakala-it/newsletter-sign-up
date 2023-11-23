@@ -6,10 +6,11 @@ import {loadContent} from "./js/content.js";
 const throttleResizeHandler = throttle(() => loadApp(), 150);
 const mainMediaBreakpoint = 700;
 
-window.addEventListener('load', () => loadApp());
-window.addEventListener('resize', () => throttleResizeHandler());
+window.addEventListener('load', loadApp);
+window.addEventListener('resize', throttleResizeHandler);
 
 export function loadApp() {
+    console.log('called');
     if (window.innerWidth < mainMediaBreakpoint) {
         loadContent('mobile');
     } else {
@@ -18,16 +19,17 @@ export function loadApp() {
 
     const inputEl = document.querySelector('.form__input');
     if (inputEl) {
-        inputEl.addEventListener('focus', () => inputClicked());
+        inputEl.addEventListener('focus', inputClicked);
     }
 }
 
 function inputClicked() {
-    console.log('called');
-    window.removeEventListener('resize', () => throttleResizeHandler());
+    const subsFormEl = document.querySelector('#subscriptionForm');
+    window.removeEventListener('resize', throttleResizeHandler);
+    subsFormEl.classList.add('extra-padding-bottom');
 
     setTimeout(() => {
-        window.addEventListener('resize', () => throttleResizeHandler());
+        window.addEventListener('resize', throttleResizeHandler);
     }, 2000);
 }
 

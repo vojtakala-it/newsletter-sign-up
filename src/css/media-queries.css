@@ -305,4 +305,8 @@
     .btn {
         font-size: 1rem;
     }
+
+    .mt-s {
+        margin-top: 0;
+    }
 }
