@@ -3,9 +3,9 @@
     flex-direction: column;
     width: 500px;
     background-color: var(--snow-white);
-    padding: 4em;
+    padding: 64px;
     border-radius: 30px;
-    row-gap: 2em;
+    row-gap: 32px;
 }
 
 .flexbox-container p {

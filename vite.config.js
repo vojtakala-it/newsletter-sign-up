@@ -4,20 +4,14 @@ import pxtorem from "postcss-pxtorem";
 
 export default defineConfig({
     root: 'src',
-    build: {
-        outDir: 'dist',
-        assetsDir: 'assets',
-    },
-    css: {
-        postcss: {
-            plugins: [
-                autoprefixer(),
-                pxtorem({
-                    rootValue: 16,
-                    propList: ["*"],
-                    // selectorBlackList: [/^@media/],
-                }),
-            ],
-        }
-    },
+    base: '/sign-up-form',
+    postcss: {
+        plugins: [
+            autoprefixer(),
+            pxtorem({
+                rootValue: 16,
+                propList: ["*"],
+            }),
+        ],
+    }
 });

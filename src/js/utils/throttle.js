@@ -13,7 +13,8 @@ export function throttle(fc, delay) {
             timeoutId = setTimeout(() => {
                 timeoutId = null;
             }, delay);
-        } else {}
+        } else {
+        }
     };
 }
 
