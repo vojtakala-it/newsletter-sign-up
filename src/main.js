@@ -3,33 +3,39 @@ import {throttle} from "./js/utils/throttle.js";
 import {loadContent} from "./js/content.js";
 
 
-const throttleResizeHandler = throttle(() => loadApp(), 150);
+const throttleResizeHandler = throttle(loadApp, 150);
 const mainMediaBreakpoint = 700;
+const mobileBreakpoint = 425;
 
 window.addEventListener('load', loadApp);
 window.addEventListener('resize', throttleResizeHandler);
 
 export function loadApp() {
-    console.log('called');
-    if (window.innerWidth < mainMediaBreakpoint) {
+    if (window.innerWidth <= mainMediaBreakpoint) {
         loadContent('mobile');
     } else {
         loadContent('desktop');
     }
 
-    const inputEl = document.querySelector('.form__input');
-    if (inputEl) {
-        inputEl.addEventListener('focus', inputClicked);
+    if (window.innerWidth <= mobileBreakpoint) {
+        const inputEl = document.querySelector('.form__input');
+        if (inputEl) {
+            inputEl.addEventListener('focus', inputFocused);
+
+            const returnBtnEl = document.getElementById('return');
+            if (returnBtnEl) {
+                window.addEventListener('click', returnBtnClicked);
+            }
+        }
     }
 }
 
-function inputClicked() {
-    // const subsFormEl = document.querySelector('#subscriptionForm');
+function inputFocused() {
     window.removeEventListener('resize', throttleResizeHandler);
-    // subsFormEl.classList.add('extra-padding-bottom');
-
-    setTimeout(() => {
-        window.addEventListener('resize', throttleResizeHandler);
-    }, 10000);
 }
+
+function returnBtnClicked() {
+    window.addEventListener('resize', throttleResizeHandler);
+}
+
 

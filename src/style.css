@@ -28,7 +28,3 @@ button:hover {
     cursor: pointer;
     background-color: var(--purplish-hover);
 }
-
-.extra-padding-bottom {
-    padding-bottom: 20rem;
-}
