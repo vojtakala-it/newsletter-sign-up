@@ -1,8 +1,6 @@
 :root {
     /*fonts*/
-    --dynamic-font: RobotoFlex;
-    --static-font: Roboto;
-    --fallback-font: 'Helvetica', 'Arial', sans-serif;
+    --fallback-font: 'Roboto-Regular, Helvetica', 'Arial', sans-serif;
 
     --thin: 300;
     --regular: 400;

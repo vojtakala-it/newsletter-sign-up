@@ -159,6 +159,10 @@
     .btn {
         font-size: 0.9rem;
     }
+
+    .mt-s {
+        margin-top: 0;
+    }
 }
 
 @media only screen and (width < 500px) {
@@ -211,6 +215,10 @@
     .btn {
         font-size: 1rem;
     }
+
+    .mt-s {
+        margin-top: 0;
+    }
 }
 
 @media only screen and (width < 376px) {
@@ -249,12 +257,20 @@
         justify-content: center;
     }
 
+    .border-radius {
+        border-radius: 0;
+    }
+
     .pxy-s {
         padding: 15px;
     }
 
     .btn {
         font-size: 1rem;
+    }
+
+    .mt-s {
+        margin-top: 0;
     }
 }
 
@@ -265,6 +281,10 @@
 
     li p {
         max-width: 70vw;
+    }
+
+    div p {
+        white-space: pre-line;
     }
 
     .flexbox {
@@ -292,10 +312,11 @@
         width: 100vw;
         height: 100vh;
         justify-content: center;
+        row-gap: 40px;
     }
 
-    .success-container {
-        row-gap: 40px;
+    .border-radius {
+        border-radius: 0;
     }
 
     .pxy-s {
@@ -304,5 +325,9 @@
 
     .btn {
         font-size: 1rem;
+    }
+
+    .mt-s {
+        margin-top: 0;
     }
 }

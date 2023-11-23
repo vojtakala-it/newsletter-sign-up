@@ -55,7 +55,7 @@ function onFormSubmission(media) {
 function prepareMsgSuccessTemplate(media) {
     const infoMsgTemplate = templateValues.info.successMsg[media];
     const compiledInfoMsg = Handlebars.compile(infoMsgTemplate);
-    const info = compiledInfoMsg({ userEmail });
+    const info = compiledInfoMsg({userEmail});
 
     setTimeout(() => {
         contentDisappear();
@@ -72,7 +72,7 @@ function prepareMsgSuccessTemplate(media) {
             contentDisappear();
             loadApp();
         });
-        }, templateTimeout);
+    }, templateTimeout);
 }
 
 export function loadContent(media) {
@@ -80,7 +80,7 @@ export function loadContent(media) {
     templateData.info = templateValues.info.form[media];
     templateData.btnText = templateValues.btnText['form'];
     templateData.altText = media;
-    templateData.images = { iconList: templateValues.img.form["iconList"] ,img: templateValues.img.form[media] };
+    templateData.images = {iconList: templateValues.img.form["iconList"], img: templateValues.img.form[media]};
     app.innerHTML = formTemplate(templateData);
 
 
