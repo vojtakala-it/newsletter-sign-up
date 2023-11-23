@@ -9,13 +9,15 @@ export default defineConfig({
         assetsDir: 'assets',
         outDir: 'dist',
     },
-    postcss: {
-        plugins: [
-            autoprefixer(),
-            pxtorem({
-                rootValue: 16,
-                propList: ["*"],
-            }),
-        ],
+    css: {
+        postcss: {
+            plugins: [
+                autoprefixer(),
+                pxtorem({
+                    rootValue: 16,
+                    propList: ["*"],
+                }),
+            ],
+        }
     }
 });
